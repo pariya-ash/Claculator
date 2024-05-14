@@ -229,6 +229,9 @@ class cal implements ActionListener {
 
             }
             if (casee==4){
+                if (Double.parseDouble(str)==0){
+                    System.out.println("you can't divide number by 0 ");
+                }
                 ans = num / Double.parseDouble(str);
                 textField.setText(Double.toString(ans));
 
