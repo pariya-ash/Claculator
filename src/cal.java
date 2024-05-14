@@ -171,7 +171,14 @@ class cal implements ActionListener {
             textField.setText(textField.getText() + "0");
         }
         if(dokme==momayez){
-            textField.setText(textField.getText() + ".");
+            String tmp_str=textField.getText();
+            if (tmp_str.contains(".")){
+                textField.setText(textField.getText());
+            }
+            else {
+                textField.setText(textField.getText() + ".");
+            }
+
         }
 
         //amaliat
@@ -247,5 +254,11 @@ class cal implements ActionListener {
             }
         }
 
+    }
+
+
+    public static void main(String[] args)
+    {
+        new cal();
     }
 }
